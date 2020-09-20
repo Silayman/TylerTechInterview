@@ -19,10 +19,10 @@ mongoose.connect(uri, { useNewUrlParser: true })
 //since mongoose promise is depreciated, we overide it with node's promise
 mongoose.Promise = global.Promise;
 if(process.env.NODE_ENV === 'production') {
-	app.use(express.static(path.join(__dirname, 'front_end', 'build')));
+	app.use(express.static(path.join(__dirname, 'client', 'build')));
   
 	app.get('*', (req, res) => {
-	  res.sendFile(path.join(__dirname, 'front_end', 'build', 'index.html'))
+	  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 	});
 	
   }
