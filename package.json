@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "node index.js",
+  "dependencies": {
+    "express":"*",
+    "body-parser":"*",
+	"bcrypt": "^0.8.5",
+	"mongoose": "*",
+	"dotenv": "*"
+ },
   "scripts": {
 	  "start": "node ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
